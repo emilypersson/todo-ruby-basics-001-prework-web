@@ -12,6 +12,9 @@ describe "ruby" do
       expect(division(num1,num2)).to eq(6)
     end
   end
+def division(num1, num2)
+    return num1/num2
+end
 
   describe '#assign_variable' do
     it 'should take an argument of a persons name and assign it to a variable name' do
@@ -20,6 +23,9 @@ describe "ruby" do
       expect(assign_variable(value)).to eq(value)
     end
   end
+def assign_variable(name)
+    value = name
+end
 
   describe '#argue' do
     it 'should add an argument to the method argue' do
@@ -28,6 +34,9 @@ describe "ruby" do
       expect(argue(phrase)).to eq(phrase)
     end  
   end
+def argue(phrase)
+    return phrase
+end
 
   describe '#greeting' do
     it 'should take in two arguments' do
@@ -43,18 +52,27 @@ describe "ruby" do
       expect{ greeting(greeting)}.to raise_error
     end
   end
+def greeting(greeting, name)
+    puts "#{greeting}, #{name}!"
+end
 
   describe '#return_a_value' do
     it 'return the phrase "Nice"' do
       expect(return_a_value).to eq("Nice")
     end
   end
+def return_a_value(phrase = "Nice")
+    return "#{phrase}"
+end
 
   describe '#last_evaluated_value' do
     it 'return the phrase "expert"' do
       expect(last_evaluated_value).to eq("expert")
     end
   end
+def last_evaluated_value(phrase = "expert")
+    return "#{phrase}"
+end
 
   describe '#pizza_party' do
     it 'has an optional argument that defaults to "cheese" and returns "cheese" when called without an argument' do
@@ -65,4 +83,7 @@ describe "ruby" do
       expect(pizza_party("pepperoni")).to eq("pepperoni")
     end
   end
+end
+def pizza_party(topping = "cheese")
+    return "#{topping}"
 end
